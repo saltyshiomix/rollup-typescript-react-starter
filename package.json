@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "rollup-typescript-react-starter",
+  "version": "1.0.0",
+  "repository": "git@github.com:saltyshiomix/rollup-typescript-react-starter.git",
+  "author": "Shiono Yoshihide <shiono.yoshihide@gmail.com>",
+  "license": "MIT"
+}

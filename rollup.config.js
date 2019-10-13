@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 
+const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.js', '.ts', '.tsx'];
 
 export default {
@@ -14,7 +15,7 @@ export default {
   },
   plugins: [
     replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development'),
     }),
     resolve({
       extensions,
@@ -47,6 +48,6 @@ export default {
         }],
       ],
     }),
-    terser(),
+    (isProd && terser()),
   ],
 };

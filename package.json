@@ -35,6 +35,6 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-terser": "^5.2.0",
     "serve": "^11.3.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   }
 }

@@ -4,4 +4,4 @@ yarn.lock
 .DS_Store
 
 # output
-public/index.js
+public

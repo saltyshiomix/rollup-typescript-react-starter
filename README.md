@@ -13,7 +13,8 @@ $ yarn (or `npm install`)
 $ yarn dev (or `npm run dev`)
 
 # production mode
+$ yarn build (or `npm run build`)
 $ yarn start (or `npm start`)
 ```
 
-Go to `http://localhost:5000` and you'll see `Rollup + TypeScript + React = ❤️`!
+And you'll see `Rollup + TypeScript + React = ❤️`!

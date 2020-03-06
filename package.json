@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c -w",
-    "start": "cross-env NODE_ENV=production rollup -c && serve public"
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "start": "serve public"
   },
   "dependencies": {
     "react": "^16.13.0",

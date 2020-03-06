@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import html from '@rollup/plugin-html';
+import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
@@ -61,6 +62,7 @@ export default {
 <head>
   <meta charset="utf-8">
   <title>${title}</title>
+  <link rel="stylesheet" href="/index.css">
 </head>
 <body>
   <div id="app"></div>
@@ -69,6 +71,9 @@ export default {
 </html>
 `;
       },
+    }),
+    scss({
+      output: 'public/index.css',
     }),
     (isProd && terser()),
     (!isProd && serve({

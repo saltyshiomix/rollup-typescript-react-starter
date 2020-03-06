@@ -2,6 +2,7 @@ import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import html from '@rollup/plugin-html';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
@@ -49,6 +50,25 @@ export default {
           useESModules: false,
         }],
       ],
+    }),
+    html({
+      fileName: 'index.html',
+      title: 'Rollup + TypeScript + React = ❤️',
+      template: ({ title }) => {
+        return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>${title}</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="/index.js"></script>
+</body>
+</html>
+`;
+      },
     }),
     (isProd && terser()),
     (!isProd && serve({

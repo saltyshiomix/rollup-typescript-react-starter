@@ -6,7 +6,7 @@
   "author": "Shiono Yoshihide <shiono.yoshihide@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development rollup -c && serve public",
+    "dev": "rollup -c -w",
     "start": "cross-env NODE_ENV=production rollup -c && serve public"
   },
   "dependencies": {
@@ -33,6 +33,8 @@
     "cross-env": "^7.0.2",
     "rollup": "^1.32.0",
     "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-terser": "^5.2.0",
     "serve": "^11.3.0",
     "typescript": "^3.8.3"

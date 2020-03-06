@@ -3,6 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.js', '.ts', '.tsx'];
@@ -49,5 +51,14 @@ export default {
       ],
     }),
     (isProd && terser()),
+    (!isProd && serve({
+      host: 'localhost',
+      port: 3000,
+      open: true,
+      contentBase: ['public'],
+    })),
+    (!isProd && livereload({
+      watch: 'public',
+    })),
   ],
 };

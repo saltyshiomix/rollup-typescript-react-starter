@@ -41,7 +41,7 @@ export default {
           useBuiltIns: true,
         }],
         ['@babel/plugin-transform-runtime', {
-          corejs: 2,
+          corejs: 3,
           helpers: true,
           regenerator: true,
           useESModules: false,

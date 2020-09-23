@@ -62,11 +62,11 @@ export default {
 <head>
   <meta charset="utf-8">
   <title>${title}</title>
-  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div id="app"></div>
-  <script src="/index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
 `;
